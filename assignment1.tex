@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\begin{document}
+\title{\huge ICSE 10 2017 PAPER}
+\author{\Small Pundi Bindusree\\ \small cs21btech11048  }
+\maketitle
+\vspace{-12pt}
+
+\section*{\Small Question 5@ solution:}
+
+Given a matrix $ B = \begin{bmatrix}
+1 & 1 \\
+8 & 3 \\
+\end{bmatrix} $
+and a matrix \(X\) such that $X = B^2 - 4B $
+\begin{align}
+   B^2 & = \begin{bmatrix}
+   1 & 1\\
+   8 & 3\\
+\end{bmatrix}
+\nonumber\\
+          & = \begin{bmatrix}
+   1 \times 1 + 1 \times 8 & 1 \times 1 + 1 \times 3\\
+   8 \times 1 + 3 \times 8 & 8 \times 1 + 3 \times 3\\
+ \end{bmatrix}
+ \nonumber\\
+          & = \begin{bmatrix}
+    1 + 8 & 1 + 3\\
+    8 + 24 & 8 + 9\\
+   \end{bmatrix}
+   \nonumber\\
+          & = \begin{bmatrix}
+    9 & 4\\
+    32 & 17\\
+    \end{bmatrix}\\
+4B & = \begin{bmatrix}
+   4 \times 1 & 4 \times 1\\
+   4 \times 8 & 4 \times 3\\
+        \end{bmatrix}
+        \nonumber\\
+        & = \begin{bmatrix}
+    4 & 4\\
+    32 & 12\\
+    \end{bmatrix}\\
+    \end{align}  substituting $(1)$ and $(2)$ in $X = B^2 - 4B$ gives\begin{align}
+    X & = \begin{bmatrix}
+    9 & 4\\
+    32 & 17\\
+    \end{bmatrix}-\begin{bmatrix}
+    4 & 4\\
+    32 & 12\\
+    \end{bmatrix}\nonumber\\
+    & = \begin{bmatrix}
+    9 - 4 & 4 - 4\\
+    32 - 32 & 17 - 12\\
+    \end{bmatrix}\nonumber\\
+    & = \begin{bmatrix}
+    5 & 0\\
+    0 & 5\\
+    \end{bmatrix}\nonumber\\
+    \end{align} Therefore, $X = \begin{bmatrix}
+    5 & 0\\
+    0 & 5\\
+    \end{bmatrix}$
+    
+ Given that $X\begin{bmatrix}
+    a\\
+    b\\
+    \end{bmatrix}=\begin{bmatrix}
+    5\\
+    50\\
+    \end{bmatrix}$
+    \begin{align}
+  X\begin{bmatrix}
+  a\\
+  b\\
+  \end{bmatrix} & = \begin{bmatrix}
+  5 & 0\\
+  0 & 5\\
+  \end{bmatrix}
+ \begin{bmatrix}
+ a\\
+ b\\
+ \end{bmatrix}
+ \nonumber\\
+                            & = \begin{bmatrix}
+                            5 \times a + 0 \times b\\
+                            0 \times a + 5 \times b\\
+                            \end{bmatrix}
+                            \nonumber\\
+                            & = \begin{bmatrix}
+                            5a+0\\
+                            0+5b\\
+                            \end{bmatrix}
+                            \nonumber\\
+                            & = \begin{bmatrix}
+                            5a\\
+                            5b\\
+                            \end{bmatrix} = \begin{bmatrix}
+                            5\\
+                            50\\
+                            \end{bmatrix}
+                            \end{align}as \begin{align}
+                            \begin{bmatrix}
+        5a\\
+        5b\\
+        \end{bmatrix} & = \begin{bmatrix}
+        5\\
+        50\\
+        \end{bmatrix}
+        \nonumber\\
+        \end{align}
+        
+       compare L.H.S values in left side matrix with R.H.S values in right side matrix
+\begin{align}
+5a & = 5\nonumber\\
+5b & = 50\nonumber\\
+\end{align}
+from $5a=5,$ $a = 1$ and $5b=50,$ $b=10.$\\
+Therefore from above the values of $a$,$b$ are $1$,$10$ respectively.
+   \end{document}
