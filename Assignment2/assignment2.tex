@@ -13,7 +13,7 @@
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
 
      \title{ASSIGNMENT 2}
-     \author{PUNDI BINDUSREE \\ CS21BTECH11048\\ ICSE 2018 12TH (16b)}
+     \author{PUNDI BINDUSREE \\ CS21BTECH11048 \\ICSE 2018 12TH 16(b)}
      \date{\today}
 \logo{\large \LaTeX{}}
 
@@ -41,15 +41,14 @@ Show that the four points A,B,C and D with position vectors $4\hat{i}+5\hat{j}+\
 \begin{enumerate}
      \item \begin{align}\vec{A} & =\myvec{4\\5\\1}\end{align}
      \item \begin{align}\vec{B} & =\myvec{0\\-1\\-1}\end{align}     
-     \item \begin{align}\vec{C} & =\myvec{3\\9\\4}\end{align}     
-\end{enumerate}
-\end{frame}
-
-
-\begin{frame}{solution}
-\begin{enumerate}
-\setcounter{enumi}{1}
-\item \begin{align}\vec{D} & =\myvec{-4\\4\\4}\end{align}
+     \item \begin{align}\vec{C} & =\myvec{3\\9\\4}\end{align}
+     \end{enumerate}
+ \end{frame}
+ 
+ 
+ \begin{frame}{solution}
+ \begin{enumerate}
+ \setcounter{enumi}{3}\item \begin{align}\vec{D} & =\myvec{-4\\4\\4}\end{align}
 \end{enumerate}
 \end{frame}
  
@@ -116,7 +115,7 @@ Therefore need to prove determinant of the matrix
  
  \begin{frame}{solution}
  \begin{enumerate}
- \setcounter{enumi}{2}
+\setcounter{enumi}{2}     
  \item 
  \begin{align}
      \vec{AD} & = \vec{D}-\vec{A}\\
@@ -148,29 +147,160 @@ Let X be a matrix and
         |X| & = \begin{vmatrix}
                 -4 & -6 & -2\\
                 -1 & 4 & 3\\
-                -8 & -1 & 3
-                \end{vmatrix}\nonumber\\
-    & = -4((4\times3)-(3\times-1))-(-6)((-1\times3)-(3\times-8))+(-2)((-1\times-1)-(4\times-8))\nonumber\\
-    & = -4(15)+6(21)-2(33)\nonumber\\
-    & = -60+126-66\nonumber\\
-    & = 0
-    \end{align}
+                -8 & -1 & 3\nonumber
+                \end{vmatrix}
+\end{align}
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}{solution}
+\begin{itemize}
+    \item Applying row reduction method for above determinant $|X|$.\\
+    \item Let $C_1,C_2,C_3$ be first,second,third columns respectively and $R_1,R_2,R_3$ be first,second,third columns respectively.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+    \item Multiplying the determinant with 2 and dividing $R_1$ in the determinant with 2 gives
+    \begin{align}
+        |X|  & = 2\begin{vmatrix}
+                -2 & -3 & -1\\
+                -1 & 4 & 3\\
+                -8 & -1 & 3
+                \end{vmatrix}
+\end{align}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item taking common factor -1 from the $R_1$ in the determinant gives
+\begin{align}
+        |X| & = -2\begin{vmatrix}
+                 2 & 3 & 1\\
+                 -1 & 4 & 3\\
+                 -8 & -1 & 3
+                 \end{vmatrix}
+\end{align}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item on interchanging $C_1$ and $C_2$ gives
+\begin{align}
+        |X| & = 2\begin{vmatrix}
+                3 & 2 & 1\\
+                4 & -1 & 3\\
+                -1 & -8 & 3
+            \end{vmatrix}
+\end{align}
+\end{enumerate}
+\end{frame}
+
  
- 
- \begin{frame}{solution}
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item $C_1\longrightarrow C_1-C_2$ gives
+\begin{align}
+        |X| & = 2\begin{vmatrix}
+                1 & 2 & 1\\
+                5 & -1 & 3\\
+                7 & -8 & 3
+           \end{vmatrix}
+           \end{align}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item $C_2\longrightarrow C_2-C3$ gives
+\begin{align}
+        |X| & = 2\begin{vmatrix}
+                1 & 1 & 1\\
+                5 & -4 & 3\\
+                7 & -11 & 3
+               \end{vmatrix}
+\end{align}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item $C_1\longrightarrow C_1-C_2$ gives
+\begin{align}
+           & = 2\begin{vmatrix}
+               0 & 1 & 1\\
+               9 & -4 & 3\\
+               18 & -11 & 3
+               \end{vmatrix}
+\end{align}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{6}
+\item $C_2\longrightarrow C_2-C_3$ gives
+\begin{align}
+       |X| & = 2\begin{vmatrix}
+               0 & 0 & 1\\
+               9 & -7 & 3\\
+               18 & -14 & 3
+               \end{vmatrix}
+\end{align}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{7}
+\item 
+    taking common factor 9 from $C_1$ and -7 from $C_2$ gives
+\begin{align}
+       |X| & = -156\begin{vmatrix}
+               0 & 0 & 1\\
+               1 & 1 & 3\\
+               2 & 2 & 3
+              \end{vmatrix}
+\end{align}
+finally two columns are obtained with the same entries
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{itemize}
+    \item If a determinant have two rows or two columns with same entries, then the value of the determinant is zero.\\
+    As the above determinant have two columns with same entries the value of the determinant of matrix X i.e.,|X|$=0$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{solution}
  \begin{itemize}
  \item
-    Determinant of matrix X $ = 0$
-    It says that scalar triple product of the vectors $\vec{AB},\vec{AC}$ and $\vec{AD}$ is zero.
+    As determinant of matrix X $ = 0$ it says that scalar triple product of the vectors $\vec{AB},\vec{AC}$ and $\vec{AD}$ is zero.
  \end{itemize}
  \end{frame}
  
  
  \begin{frame}{solution}
  \begin{itemize}
-\item There the given four position vectors $\vec{A},\vec{B},\vec{C}$ and $\vec{D}$ are coplanar.\\
+\item Therefore the given four position vectors $\vec{A},\vec{B},\vec{C}$ and $\vec{D}$ are coplanar.\\
      Hence proved.
  \end{itemize}
  \end{frame}
