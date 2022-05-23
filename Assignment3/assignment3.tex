@@ -1,0 +1,100 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage{csquotes}
+\usepackage{comment}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\title{Assignment 3}
+     \author{PUNDI BINDUSREE \\
+     CS21BTECH11048 \\
+     Papoulis Chapter3 3.2\\ }
+     \date{\today}
+\logo{\large \LaTeX{}}  
+
+\begin{document}
+     
+\begin{frame}
+    \maketitle    
+\end{frame}
+     
+     \logo{}
+     
+     \begin{frame}{Outline}
+    \tableofcontents
+     \end{frame}
+
+   \section{Question}
+   \begin{frame}{Question}
+   \begin{block}{Question}
+   A pair of dice is rolled 50 times.Find the probability of obtaining double six at least three times.
+   \end{block}
+   \end{frame}
+   
+   \section{Solution}
+   \begin{frame}{solution}
+    Given there are
+     \begin{enumerate}
+          \item two dices
+          \item number of times the two dices rolled be N = 50
+       \end{enumerate}
+   \end{frame}
+   
+   \begin{frame}{solution}
+   
+        \begin{block}{Required to find}
+       the probability of obtaining double six atleast three times.
+       \end{block}
+
+   \end{frame}
+   
+   \begin{frame}{solution}
+   \begin{itemize}
+       \item Let M be the move of a single dice.
+   Then probabiity of single move of a dice = P(M)= $\frac{1}{50}$.
+       \item Probability of obataining a number from 1 to 6 on a single dice  = $\frac{1}{6}$
+       \end{itemize}
+    \end{frame}
+    
+\begin{frame}{solution}
+    \begin{itemize}
+    \item probability of obtaining double six = $\frac{1}{36}$
+    \item probability of not obtaining double six = $\frac{35}{36}$
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{solution}
+    \begin{itemize}
+        
+    \item probability of obtaining double six atleast three times = probability of obtaining double six (three times+ four times + ......50 times)\\
+    
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{solution}
+    \begin{itemize}
+        \item 
+        probability of obtaining double six $n(n<50)$ times = ${50}\choose{n}$ $\times (\frac{1}{50})^n \times (\frac{1}{36})^n \times (\frac{35}{36})^{50-n}$.\\
+        
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{solution}
+    \begin{itemize}
+        \item 
+            probability of obtaining double six atleast three times\\ = ${50}\choose{3}$ $\times(\frac{1}{50})^3\times(\frac{1}{36})^3\times(\frac{35}{36})^{47}+$.....${50}\choose{50}$ $\times(\frac{1}{50})^{50}\times(\frac{1}{36})^{50}\times(\frac{35}{36})^0$.\\
+                    = 1 - ${50}\choose{2}$ $\times(\frac{1}{50})^2\times(\frac{1}{36})^2\times(\frac{35}{36})^{48}$-${50}\choose{1}$ $\times(\frac{1}{50})^1\times(\frac{1}{36})^1\times(\frac{35}{36})^{49}$-${50}\choose{0}$ $\times(\frac{1}{50})^0\times(\frac{1}{36})^0\times(\frac{35}{36})^{50}$\\
+       
+    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{solution}
+    \begin{itemize}
+        \item 
+        Hence probability of obtaining double six atleast three times = 1 - ${50}\choose{2}$ $\times(\frac{1}{50})^2\times(\frac{1}{36})^2\times(\frac{35}{36})^{48}$-${50}\choose{1}$ $\times(\frac{1}{50})^1\times(\frac{1}{36})^1\times(\frac{35}{36})^{49}$ -${50}\choose{0}$ $\times(\frac{1}{50})^0\times(\frac{1}{36})^0\times(\frac{35}{36})^{50}$
+   
+    \end{itemize}
+    \end{frame}
+
+   \end{document}
