@@ -1,0 +1,97 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage{csquotes}
+\usepackage{comment}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\title{Assignment 4}
+     \author{PUNDI BINDUSREE \\
+     CS21BTECH11048 \\
+     Papoulis Chapter3 Example 3.10\\ }
+     \date{\today}
+\logo{\large \LaTeX{}}  
+
+\begin{document}
+     
+\begin{frame}
+    \maketitle    
+\end{frame}
+     
+     \logo{}
+     
+     \begin{frame}{Outline}
+    \tableofcontents
+     \end{frame}
+
+   \section{Question}
+   \begin{frame}{Question}
+   \begin{block}{Question}
+   We place at random n points in the interval (0,T). What is the probability that k of these n points are in the interval $(t_1,t_2)$?
+ \end{block}
+ \end{frame} 
+ 
+ \section{solution}
+ \begin{frame}{solution}
+ \begin{itemize}
+     \item This can be considered as a problem in repeated trials.
+ \end{itemize}
+ \end{frame}
+ 
+ \begin{frame}{solution}
+ \begin{itemize}
+     \item Given an interval (0,T) and a sub interval $(t_1,t_2)$ 
+      \item In the given problem the experiment is S={placing a single point in the interval (0,T)}
+     \item In this experiment an event A={the single point got placed is in the interval $(t_1,t_2)$.}
+ \end{itemize}
+ \end{frame}
+ 
+ \begin{frame}{solution}
+ \begin{enumerate}
+     \item probability of event $A=P(A)=\frac{t_2-t_1}{T}$
+     \item Let $P(A)=p=\frac{t_2-t_1}{T}$
+     \item Let $q=P(A')=1-\frac{t_2-t_1}{T}$
+ \end{enumerate}
+ \end{frame}
+ 
+ \begin{frame}{solution}
+ \begin{itemize}
+     \item It is given that n random points are being placed in the interval (0,T).
+     \item Among those n points k points are in the sub interval $(t_1,t_2)$. 
+ \end{itemize}
+ \end{frame}
+ 
+ \begin{frame}{solution}
+ \begin{itemize}
+     \item Let P(B)= probability of event B.\\
+     where B is the event of k points being placed in the sub interval $(t_1,t_2)$ among n points in (0,T). 
+ \end{itemize}
+ \end{frame}
+ 
+ \begin{frame}{solution}
+ \begin{enumerate}
+     \item P(B)  = ${n}\choose{k}$ $p^{k}q^{n-k}$\\
+         \begin{align} \text{where } p & = \frac{t_2-t_1}{T}\nonumber\\
+                                     q & = 1-\frac{t_2-t_1}{T}\nonumber
+              \end{align}
+\end{enumerate}
+ \end{frame}
+ 
+ \begin{frame}{solution}
+ \begin{enumerate}
+\setcounter{enumi}{1}
+\item Substituting p,q in P(B) gives \\
+
+   \begin{center}
+   $P(B) =$ ${n}\choose{k}$ $(\frac{t_2-t_1}{T})^{k}(1-\frac{t_2-t_1}{T})^{n-k}$
+\end{center}
+ \end{enumerate}
+ \end{frame}
+ 
+ \begin{frame}{solution}
+ \begin{itemize}
+     \item Therefore the probability of k points being placed in the sub interval $(t_1,t_2)$ among n points in (0,T) = ${n}\choose{k}$ $(\frac{t_2-t_1}{T})^{k}(1-\frac{t_2-t_1}{T})^{n-k}$. 
+ \end{itemize}
+ \end{frame}
+ 
+ \end{document}
