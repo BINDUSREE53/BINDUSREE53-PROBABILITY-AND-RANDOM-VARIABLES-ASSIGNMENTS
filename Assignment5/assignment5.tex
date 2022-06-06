@@ -1,0 +1,130 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage{csquotes}
+\usepackage{comment}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\title{Assignment 5}
+     \author{PUNDI BINDUSREE \\
+     CS21BTECH11048 \\
+     Papoulis Chapter6 Ex-6.25\\ }
+     \date{\today}
+\logo{\large \LaTeX{}}  
+
+\begin{document}
+     
+\begin{frame}
+    \maketitle    
+\end{frame}
+     
+     \logo{}
+     
+     \begin{frame}{Outline}
+    \tableofcontents
+     \end{frame}
+
+
+\section{Question}
+\begin{frame}{Question}
+\begin{block}{Question}
+Let \textbf{x} be the lifetime of a certain electric bulb, and y that of its replacement after the failure of the first bulb. Suppose \textbf{x} and \textbf{y} are independent with common exponential density function with parameter $\lambda$.Find the probability that the combined lifetime exceeds 2$\lambda$. What is the probability that the replacement outlasts the original component by $\lambda$?
+\end{block}
+\end{frame}
+
+
+\section{Solution}
+\begin{frame}{solution}
+Given\\
+\begin{itemize}
+    \item the lifetime of a certain electric bulb = \textbf{x}
+    \item and lifetime of its replacement after the failure of the first bulb = \textbf{y}
+    \item and also given that \textbf{x} and \textbf{y} are independent with common exponential density function with parameter $\lambda$ .
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{itemize}
+    \item density function of \textbf{x} = $f_{\textbf{x}}(x) = \frac{1}{\lambda}e^{-\frac{x}{\lambda}}U(x)$
+    \item density function of \textbf{y} = $f_{\textbf{y}}(y) = \frac{1}{\lambda}e^{-\frac{y}{\lambda}}U(y)$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{solution}
+As it is given that \textbf{x} and \textbf{y} are independent
+\begin{enumerate}
+    \item $f_{\textbf{xy}}(xy) = f_{\textbf{x}}(x)f_{\textbf{y}}(y)$
+    \item $f_{\textbf{xy}}(xy) = \frac{1}{\lambda^2}e^{-\frac{x+y}{\lambda}}U(x)U(y)$
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item let \textbf{z}=\textbf{x}+\textbf{y}
+\begin{align}
+    \phi_{\textbf{z}}(w) & = \phi_{\textbf{x}}(w)\phi_{\textbf{y}}(w)\frac{1}{(1-jw\lambda)^2}\\
+        \textbf{z} &~ Gamma(2,\lambda)\\
+\text{Therefore it gives}\nonumber\\
+f_{\textbf{z}}(z) & = \frac{z}{\lambda^2}e^{-\frac{z}{\lambda}}U(z) 
+    \end{align}
+\end{enumerate}
+\end{frame}
+     
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item \begin{align}
+P(Z>2\lamda) & = \int_{2\lambda}^{\infty}\frac{z}{\lambda^2}e^{_\frac{z}{\lambda}}dz\\
+             & = \int_{2}^{\infty}xe^{-x}dx\nonumber\\
+             & = 3e^{-2}\nonumber\\
+             & = 0.406
+\end{align}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{solution}
+Now need to find the probability of lifetime of replacement exceeds the original by $\lambda$ \\
+\begin{enumerate}
+    \item This can be found by calculating $P((\textbf{y}-\textbf{x})>\lambda)$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item let \textbf{w} $=$ \textbf{y}-\textbf{x}\\
+\begin{align}
+    P((\textbf{y}-\textbf{x})>\lambda) & = P(\textbf{w}>\lambda)\\
+                                     & = \int_{\lambda}^{\infty}f_{\textbf{w}}(w)dw\nonumber\\
+\end{align}
+\end{enumerate}
+\end{frame}
+     
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item \begin{align}
+    \text{For w}>\text{0, this gives}\\
+    f_{\textbf{w}}(w) & = \int_{0}^{infty}\frac{1}{\lambda^2}e^{-\frac{w+2y}{\lambda}}dy\\
+                      & = \frac{1}{\lambda^2}e^{-\frac{w}{\lambda}}\int_{0}^{\infty}e^{-\frac{2y}{\lambda}}dy\\
+                      & = \frac{1}{2\lambda}e^{-\frac{w}{\lambda}},\text{w}>0
+\end{align}
+\end{enumerate}
+\end{frame}
+     
+
+\begin{frame}{solution}
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item Hence $P(\textbf{y}-\textbf{x}>\lambda) = P(\textbf{w}>\lambda) = \int_{\lambda}^{\infty}\frac{1}{2\lambda}e^{-\frac{w}{\lambda}}dw = \frac{1}{2e}$
+\end{enumerate}
+\end{frame}
+     
+     \end{document}
